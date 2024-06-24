@@ -155,3 +155,29 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.section.is-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content ul {
+    list-style: disc inside;
+    display: inline-block;
+    text-align: left;
+    padding-left: 0;
+}
+
+.content ul li {
+    margin: 5px 0;
+}
+
+.resized-image {
+    width: 60%;
+}
