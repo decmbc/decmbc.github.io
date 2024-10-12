@@ -217,7 +217,7 @@
     <div class="container is-max-desktop">
         <div class="columns is-centered">
             <div class="column is-full-width">
-                <h3 class="title is-centered has-text-centered">Training in simulation</h3>
+                <h3 class="title is-centered has-text-centered">Simulation Training</h3>
                 <div class="content has-text-centered">
                     <p>
                         We train with limited carrier configurations (upto 3 robots) simultaneously by
@@ -245,7 +245,8 @@
     <div class="container is-max-desktop">
 
         <!-- Re-rendering. -->
-        <h3 class="title is-centered has-text-centered">Testing in simulation</h3>
+        <h3 class="title is-centered has-text-centered">Simulation Testing</h3>
+        <h3 class="title is-4 has-text-centered">Varying Loads and Configurations</h3>
         <div class="content has-text-centered">
             <p>
                 We test our policy across variety of carrier configurations,
@@ -273,7 +274,34 @@
     <div class="container is-max-desktop">
 
         <!-- Re-rendering. -->
-        <h3 class="title is-centered has-text-centered">Testing on real hardware</h3>
+        <h3 class="title is-centered has-text-centered">Simulation Testing</h3>
+        <h3 class="title is-4 has-text-centered">Challenging Terrain</h3>
+        <!--        <h3 class="title is-4 has-text-centered">Testing maneuverability</h3>-->
+        <div class="content has-text-centered">
+            <p>
+                With additional training on additional terrain types, including stairs, bumps, slopes, and dynamic obstacles, the controller is able traverse a range of challenging terrains. Note that the robots are blind and use only proprioceptive sensory input.
+                Nevertheless they can collectively react to terrain disturbances and collectively recover from instabilities of individual robots.
+            </p>
+        </div>
+        <div class="content has-text-centered">
+            <video id="replay-video3"
+                   controls
+                   muted
+                   preload
+                   playsinline
+                   width="85%">
+                <source src="./static/videos/decMBC_CoRL_video_website_testing_rough_terrain_sim_grid.mp4"
+                        type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-centered has-text-centered">Real hardware Testing</h3>
         <h3 class="title is-4 has-text-centered">Testing maneuverability</h3>
         <div class="content has-text-centered">
             <p>
@@ -329,33 +357,6 @@
                 playsinline
                 width="85%">
                 <source src="./static/videos/decMBC_CoRL_video_website_testing_real_grid.mp4"
-                        type="video/mp4">
-            </video>
-        </div>
-    </div>
-</section>
-
-
-<section class="section">
-    <div class="container is-max-desktop">
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-centered has-text-centered">Extending our policy to uneven terrain</h3>
-<!--        <h3 class="title is-4 has-text-centered">Testing maneuverability</h3>-->
-        <div class="content has-text-centered">
-            <p>
-                We build upon a policy originally trained on flat terrain and further adapt it through training in diverse rough terrain environments.
-                This extended training and evaluation encompass a range of challenging scenarios, including stairs, bumps, slopes, and dynamic obstacles.
-            </p>
-        </div>
-        <div class="content has-text-centered">
-            <video id="replay-video3"
-                   controls
-                   muted
-                   preload
-                   playsinline
-                   width="85%">
-                <source src="./static/videos/decMBC_CoRL_video_website_testing_rough_terrain_sim_grid.mp4"
                         type="video/mp4">
             </video>
         </div>
