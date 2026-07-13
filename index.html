@@ -31,7 +31,9 @@
         gtag('config', 'G-PYVRSFMDRL');
     </script>
 
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
             rel="stylesheet">
 
     <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -50,14 +52,53 @@
     <script src="./static/js/index.js"></script>
 </head>
 <body>
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- Following Works Dropdown -->
+<div class="more-works-container">
+    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View Following Works">
+        <i class="fas fa-flask"></i>
+        Following Works
+        <i class="fas fa-chevron-down dropdown-arrow"></i>
+    </button>
+    <div class="more-works-dropdown" id="moreWorksDropdown">
+        <div class="dropdown-header">
+            <h4>Following Works</h4>
+            <button class="close-btn" onclick="toggleMoreWorks()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="works-list">
+            <a href="https://decplm.github.io/" class="work-item" target="_blank">
+                <div class="work-info">
+                    <h5>Multi-Quadruped Cooperative Object Transport: Learning Decentralized Pinch-Lift-Move</h5>
+                    <p>A decentralized RL framework that lets teams of quadruped-arm robots pinch, lift, and transport ungraspable objects via contact-only coordination, without communication or rigid coupling.</p>
+                    <span class="work-venue">ICRA 2026</span>
+                </div>
+                <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<main id="main-content">
 
 <section class="hero">
     <div class="hero-body">
         <div class="container is-max-desktop">
             <div class="columns is-centered">
                 <div class="column has-text-centered">
-                    <h1 class="title is-1 publication-title">Learning Decentralized Multi-Biped Control for Payload
+                    <h1 class="title is-1 publication-title">Learning <span class="highlight">Dec</span>entralized <span class="highlight">M</span>ulti-<span class="highlight">B</span>iped <span class="highlight">C</span>ontrol for Payload
                         Transport</h1>
+                    <p class="is-size-5" style="margin-top:0.75rem; padding-bottom:0.75rem;">
+                        <span class="tag is-warning is-light is-medium"
+                              style="border-radius:999px; letter-spacing:0.06em; text-transform:uppercase;">
+                          Accepted at CoRL 2025
+                        </span>
+                    </p>
                     <div class="is-size-5 publication-authors">
             <span class="author-block">
                 <a target="_blank" href="https://bikcrum.com/">Bikram Pandit</a>,&nbsp;
@@ -85,14 +126,26 @@
             </span>
                     </div>
 
-                    <div class="is-size-5 publication-authors">
+                    <div class="is-size-5 publication-authors" style="margin-top:1rem;">
             <span class="author-block">
-                Collaborative Robotics and Intelligent Systems (CoRIS) Institute<br/>Oregon State University
+                <a target="_blank" href="https://mime.engineering.oregonstate.edu/research/drl/">Dynamics Robotics and AI Lab (DRAIL)</a>, Oregon State University
             </span>
                     </div>
 
                     <div class="column has-text-centered">
                         <div class="publication-links">
+
+            <!-- Pdf Link -->
+            <span class="link-block">
+                <a target="_blank"
+                    href="https://arxiv.org/pdf/2406.17279"
+                    class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper (PDF)</span>
+                </a>
+            </span>
 
             <!-- Arxiv Link -->
             <span class="link-block">
@@ -106,17 +159,29 @@
                 </a>
             </span>
 
-            <!-- Pdf Link -->
+            <!-- Arxiv HTML Link -->
             <span class="link-block">
                 <a target="_blank"
-                    href="https://arxiv.org/pdf/2406.17279"
+                    href="https://arxiv.org/html/2406.17279"
                     class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
+                    <i class="ai ai-arxiv"></i>
                 </span>
-                <span>Paper</span>
+                <span>arXiv (HTML)</span>
                 </a>
             </span>
+
+            <!-- Code Link -->
+            <span class="link-block">
+                <a target="_blank"
+                   href="https://github.com/osudrl/decentralized_multibiped_controller"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
 
             <!-- Video Link -->
             <span class="link-block">
@@ -129,16 +194,6 @@
                 <span>Video</span>
                 </a>
             </span>
-                            <span class="link-block">
-                <a target="_blank"
-                   href="https://github.com/osudrl/decentralized_multibiped_controller"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
                         </div>
                     </div>
                 </div>
@@ -365,27 +420,46 @@
 
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
-        <h2 class="title">BibTeX</h2>
-        <pre><code>@misc{pandit2024learningdecentralizedmultibipedcontrol,
-        title={Learning Decentralized Multi-Biped Control for Payload Transport},
-        author={Bikram Pandit and Ashutosh Gupta and Mohitvishnu S. Gadde and Addison Johnson and Aayam Kumar Shrestha and Helei Duan and Jeremy Dao and Alan Fern},
-        year={2024},
-        eprint={2406.17279},
-        archivePrefix={arXiv},
-        primaryClass={cs.RO}
-        url={https://arxiv.org/abs/2406.17279},
+        <div class="bibtex-header">
+            <h2 class="title">BibTeX</h2>
+            <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+                <i class="fas fa-copy"></i>
+                <span class="copy-text">Copy</span>
+            </button>
+        </div>
+<pre id="bibtex-code"><code>@inproceedings{pandit2025decmbc,
+  author    = {Pandit, Bikram and Gupta, Ashutosh and Gadde, Mohitvishnu S. and Johnson, Addison and Duan, Helei and Dao, Jeremy and Shrestha, Aayam Kumar and Fern, Alan},
+  title     = {Learning Decentralized Multi-Biped Control for Payload Transport},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2025}
 }</code></pre>
     </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
     <div class="container">
-        <div class="content has-text-centered">
-            <p>Page template borrowed from <a target="_blank" href="https://nerfies.github.io/"><span class="dnerf">Nerfies</span></a>.
-            </p>
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>
+                        This page was built using the
+                        <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">
+                            Academic Project Page Template
+                        </a>
+                        which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                        You are free to borrow the source code of this website; we just ask that you link back to this page in the footer. <br>
+                        This website is licensed under a
+                        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                            Creative Commons Attribution-ShareAlike 4.0 International License
+                        </a>.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
 
+</main>
 </body>
 </html>
