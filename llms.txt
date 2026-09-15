@@ -1,0 +1,28 @@
+# decMBC
+
+> Learning Decentralized Multi-Biped Control for Payload Transport. Bikram Pandit, Ashutosh Gupta, Mohitvishnu S. Gadde, Addison Johnson, Aayam Kumar Shrestha, Helei Duan, Jeremy Dao, Alan Fern. Conference on Robot Learning (CoRL), 2025.
+
+decMBC is a decentralized controller for multi-biped payload transport, where wheels on a carrier are replaced by multiple bipedal robots. A single controller generalizes across varying numbers and configurations of rigidly attached robots without retraining, and transfers from simulation to real Cassie robots.
+
+## Links
+- [Paper (arXiv)](https://arxiv.org/abs/2406.17279)
+- [Paper (PDF)](https://arxiv.org/pdf/2406.17279)
+- [Code](https://github.com/osudrl/decentralized_multibiped_controller)
+- [Video](https://www.youtube.com/watch?v=2sJQCBaYKsw)
+
+## Authors
+Bikram Pandit, Ashutosh Gupta, Mohitvishnu S. Gadde, Addison Johnson, Aayam Kumar Shrestha, Helei Duan, Jeremy Dao, Alan Fern — Dynamics Robotics and AI Lab (DRAIL), Oregon State University.
+
+## Citation
+```bibtex
+@inproceedings{pandit2025decmbc,
+  author    = {Pandit, Bikram and Gupta, Ashutosh and Gadde, Mohitvishnu S. and Johnson, Addison and Duan, Helei and Dao, Jeremy and Shrestha, Aayam Kumar and Fern, Alan},
+  title     = {Learning Decentralized Multi-Biped Control for Payload Transport},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2025}
+}
+```
+
+## Related work from the same lab
+- [decMHT](https://decmht.github.io/) — Learning Multi-Humanoid Pickup and Transport via Decentralized Object-Centric Control (under review)
+- [decPLM](https://decplm.github.io/) — Multi-Quadruped Cooperative Object Transport: Learning Decentralized Pinch-Lift-Move (ICRA 2026)
