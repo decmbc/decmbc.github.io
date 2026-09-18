@@ -7,6 +7,7 @@ decMBC is a decentralized controller for multi-biped payload transport, where wh
 ## Links
 - [Paper (arXiv)](https://arxiv.org/abs/2406.17279)
 - [Paper (PDF)](https://arxiv.org/pdf/2406.17279)
+- [Publication (PMLR)](https://proceedings.mlr.press/v270/pandit25a.html)
 - [Code](https://github.com/osudrl/decentralized_multibiped_controller)
 - [Video](https://www.youtube.com/watch?v=2sJQCBaYKsw)
 
